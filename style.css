@@ -37,6 +37,8 @@
      .column {
        float: left;
        width: 25%;
+       border-radius:5px;
+       display: flex;
      }
      
      /* Clear floats after rows */
