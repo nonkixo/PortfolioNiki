@@ -51,9 +51,11 @@
      
      
      .content {
-       background-color: white;
+       background-color:#A49A9A;
        padding: 10px;
        display: grid;
+       border-style: solid;
+       border-color: #F23869;
      }
      
     
