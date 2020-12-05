@@ -2,6 +2,12 @@
     margin: 0%;
     padding: 0%;   
    }
+  :root
+  :root {
+    --primary-color: #212121;
+    --white: #ffffff;
+    --border:#F23869;
+  }
    * {
        box-sizing: border-box;
      }
