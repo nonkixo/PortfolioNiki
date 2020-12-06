@@ -16,11 +16,8 @@
        background-color: #212121;
        padding: 20px;
        font-family: Arial;
-      
-     }
-     html {
-     border:solid;
-     border-color:#F23869
+       border-style: solid;
+       border-color:#F23869
      }
      
      .main {
