@@ -16,6 +16,8 @@
        background-color: #212121;
        padding: 20px;
        font-family: Arial;
+       border-style: solid;
+       border-color:#F23869
      }
      
      
@@ -29,6 +31,7 @@
        color:white;
        word-break: break-all;
        background-color: var(--primary-color);
+       display: grid;
      }
       h2 {
       color: #ffffff;
