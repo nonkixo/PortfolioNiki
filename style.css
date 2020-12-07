@@ -19,7 +19,11 @@
        border-style: solid;
        border-color:#F23869
      }
-     
+     .flex-container {
+      display: flex;
+      flex-direction: column;
+      color: #ffffff;
+    }
      .main {
        max-width: 1000px;
        margin: auto;
