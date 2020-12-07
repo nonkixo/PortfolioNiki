@@ -20,6 +20,12 @@ p {
     margin-inline-end: 0px;
     
 }
+.img1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
 
 html {
     font-family: sans-serif;
@@ -60,6 +66,9 @@ html {
     .dialog-box_info, .dialog-box_error, .dialog-box_success, .dialog-box_warning {
         max-width: 30rem;
     padding: 1.5rem;   
-
+    
     }
+    .img1 {
+    width:25%;
+    }    
 }
