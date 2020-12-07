@@ -9,6 +9,7 @@
     --white: #ffffff;
     --border:#F23869;
   }
+  
    * {
        box-sizing: border-box;
      }
@@ -37,7 +38,7 @@
        color:white;
        word-break: break-all;
        background-color: var(--primary-color);
-       display: grid;
+       display:grid;
      }
       h2 {
       color: #ffffff;
@@ -69,7 +70,8 @@
        display: table;
        clear: both;
      }
-     
+    
+    
      
      .content {
        background-color:#A49A9A;
@@ -85,16 +87,21 @@
       padding: 15px 32px;
       text-align: center;
       text-decoration: none;
-      display:grid;
+      display: grid;
       font-size: 16px;
-     
-    
-     @media screen and (max-width: 900px) {
-       .column {
-         width: 50%;
-       }
-     
-     @media screen and (max-width: 600px) {
-       .column {
-         width: 100%;
-       }
+     }
+    /* Responsive layout 1 */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+   /* Responsive layout 2*/
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+
