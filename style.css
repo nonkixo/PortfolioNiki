@@ -19,9 +19,19 @@
        background-color: #212121;
        padding: 20px;
        font-family: Arial;
-       border-style: solid;
-       border-color:#F23869
+       
      }
+     .border {
+     border-style: solid;
+     border-color: #F23869;
+     position: relative;
+     box-shadow: inset 0 0 0.4em #F23869, 0 0 0.4em #F23869;
+     margin: 1rem;
+     margin-top: 2rem;
+     border-radius: 0.2em;
+}
+     
+     
      .flex-container {
       display: flex;
       flex-direction: column;
@@ -35,12 +45,13 @@
      }
      
      h1 {
-       font-size: 50px;
+       font-size: 40px;
        color:white;
        word-break: break-all;
        background-color: var(--primary-color);
        display:grid;
      }
+     /* Footer */
      footer {
      display: flex;
      justify-content: center;
@@ -105,41 +116,32 @@
      /* Buttons */
      .btn1 {
       background-color: #F23869; 
-      border: none;
-      color: white;
-      padding: 15px 32px;
+      border:solid;
+      color: black;
+      margin: 0.1rem;
+      padding: 0.1rem 0.1rem;
       text-align: center;
       text-decoration: none;
-      display: grid;
-      font-size: 16px;
+      display: flex;
+      font-size: 15px;
+      width: 5rem;
      }
      .btn2 {
       background-color: #F23869; 
       border: none;
       color: white;
-      padding: 15px 32px;
+      padding: 1.5rem 2.5rem;
       text-align: center;
       text-decoration: none;
       display: grid;
       font-size: 16px;
      }
      
-    /* Responsive layout 1 */
-@media screen and (max-width: 900px) {
-  .column {
-    width: 50%;
-  }
-}
 
-   /* Responsive layout 2*/
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-}
+
  /* Dialog boks Rød */
 .dialog-box_info {
-  border: 0.2em solid #F23869;
+  border: 0.2rem solid #F23869;
   box-shadow: inset 0 0 0.4em #F23869, 0 0 0.4em #F23869;
 }
 .dialog-box_info, .dialog-box_error, .dialog-box_success, .dialog-box_warning {
@@ -150,22 +152,23 @@
   padding: 1.5rem;
   position: relative;
   width: 95%;
+  border-style: solid;
 }
 .dialog-box_error {
-  border: 0.2em solid #F23869;
+  border: 0.2rem solid #F23869;
   box-shadow: inset 0 0 0.4em  #F23869, 0 0 0.4em #F23869;
 }
 .dialog-box_success {
-  border: 0.2em solid  #F23869;
-  box-shadow: inset 0 0 0.4em #F23869, 0 0 0.4e #F23869;  
+  border: 0.2rem solid  #F23869;
+  box-shadow: inset 0 0 0.4em #F23869, 0 0 0.4em #F23869;  
 }
 .dialog-box_warning {
-  border: 0.2em solid  #F23869;
-  box-shadow: inset 0 0 0.4em #F23869, 0 0 0.4em #F23869;
+  border: 0.2rem solid  #F23869;
+  box-shadow: inset 0 0 0.4em #F23869, 0 0 0.4em #F23869;  
 }
 .dialog-box_info {
-    border: 0.2em solid  #F23869;
-    box-shadow: inset 0 0 0.4em  #F23869, 0 0 0.4em  #F23869
+    border: 0.2rem solid  #F23869;
+    box-shadow: inset 0 0 0.4em  #F23869, 0 0 0.4em  #F23869;
 }
 .dialog-box_info, .dialog-box_error, .dialog-box_success, .dialog-box_warning {
     border-radius: 1em;
@@ -246,6 +249,18 @@ html {
     border: 0.2em solid #ccff00;
     box-shadow: inset 0 0 0.4em#ccff00, 0 0 0.4em#ccff00;
 }
+    /* Responsive layout 1 */
+    @media screen and (max-width: 900px) {
+      .column {
+        width: 50%;
+      }
+    }
+    
+       /* Responsive layout 2*/
+    @media screen and (max-width: 600px) {
+      .column {
+        width: 100%;
+      }
 @media screen and (min-width: 1920px) {
   .dialog-box_info, .dialog-box_error, .dialog-box_success, .dialog-box_warning {
       max-width: 30rem;
@@ -257,3 +272,4 @@ html {
   }    
 }
 
+    }
