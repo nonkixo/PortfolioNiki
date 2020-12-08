@@ -21,6 +21,7 @@
        font-family: Arial;
        
      }
+     /* Borders */
      .border {
      border-style: solid;
      border-color: #F23869;
@@ -29,9 +30,19 @@
      margin: 1rem;
      margin-top: 2rem;
      border-radius: 0.2em;
+     padding:0.5rem;
+     
 }
-     
-     
+.border1 {
+  border-style: solid;
+  border-color: var(--neon);
+  position: relative;
+  box-shadow: inset 0 0 0.4em var(--neon), 0 0 0.4em var(--neon);
+  margin: 1rem;
+  margin-top: 2rem;
+  border-radius: 0.2em;
+  padding:0.5rem;
+}    
      .flex-container {
       display: flex;
       flex-direction: column;
