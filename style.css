@@ -157,9 +157,8 @@ input[type=submit]:hover {
      h1 {
        font-size: 40px;
        color:white;
-       word-break: break-all;
        background-color: var(--primary-color);
-       display:grid;
+       display:flex;
        justify-content: center;
      }
      /* Footer */
