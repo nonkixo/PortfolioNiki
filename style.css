@@ -357,11 +357,16 @@ p {
   margin-inline-end: 0px;
   
 }
+/* Images */
 .img1 {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+img {
+  width: 100%;
+  height: auto;
 }
 
 html {
