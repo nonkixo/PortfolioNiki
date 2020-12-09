@@ -19,15 +19,19 @@
        background-color: #212121;
        padding: 20px;
        font-family: Arial;
-       
+       /* Navigation-bar */
      }
      ul {
       list-style-type: none;
-      margin: 0;
-      padding: 0;
+      margin: 0.2rem;
+      padding: 0.2rem;
       border-style:solid;
       width: 6rem;
+      display: flex;
 
+    }
+    li a {
+      display: block;
     }
      /* Borders */
      .border {
