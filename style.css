@@ -21,17 +21,15 @@
        font-family: Arial;
        /* Navigation-bar */
      }
-     ul {
-      list-style-type: none;
-      margin: 0.2rem;
-      padding: 0.2rem;
-      border-style:solid;
-      width: 6rem;
-      display: flex;
-
+     li {
+      float: left;
     }
-    li a {
+    
+    a {
       display: block;
+      padding: 0.5rem;
+      background-color: #A49A9A;
+      border-radius: 0.2rem;
     }
      /* Borders */
      .border {
