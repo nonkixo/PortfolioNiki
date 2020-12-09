@@ -298,14 +298,49 @@ span.psw {
      }
      .btn2 {
       background-color: #F23869; 
-      border: none;
+      border-style: solid;
       color: white;
       padding: 1.5rem 2.5rem;
       text-align: center;
       text-decoration: none;
       display: grid;
+      font-size: 20px;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      box-shadow: inset 0 0 0.4rem #F23869, 0 0 0.4rem #F23869;
+      border-color:  #F23869;
+}
+      
+     
+     .btn3 {
+      background-color: #F23869; 
+      border: none;
+      color: white;
+      padding: 1.5rem 2.5rem;
+      text-align: center;
+      text-decoration: none;
+      display: block;
       font-size: 16px;
-     }
+      margin-right: 42.5rem;
+      margin-left: 42.5rem;
+      border-style: solid;
+      border-color: var(--primary-color);
+      box-shadow: inset 0 0 0.4rem #F23869, 0 0 0.4rem #F23869;
+       }
+       .btn4 {
+        background-color: #ab20fd; 
+        border-style: solid;
+        color: white;
+        padding: 1.5rem 2.5rem;
+        text-align: center;
+        text-decoration: none;
+        display: grid;
+        font-size: 20px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        box-shadow: inset 0 0 0.4rem #ab20fd, 0 0 0.4rem #ab20fd;
+        border-color:  #ab20fd;
+  }
      
 
 
@@ -326,19 +361,19 @@ span.psw {
 }
 .dialog-box_error {
   border: 0.2rem solid #F23869;
-  box-shadow: inset 0 0 0.4em  #F23869, 0 0 0.4em #F23869;
+  box-shadow: inset 0 0 0.4rem  #F23869, 0 0 0.4rem #F23869;
 }
 .dialog-box_success {
   border: 0.2rem solid  #F23869;
-  box-shadow: inset 0 0 0.4em #F23869, 0 0 0.4em #F23869;  
+  box-shadow: inset 0 0 0.4rem #F23869, 0 0 0.4rem #F23869;  
 }
 .dialog-box_warning {
   border: 0.2rem solid  #F23869;
-  box-shadow: inset 0 0 0.4em #F23869, 0 0 0.4em #F23869;  
+  box-shadow: inset 0 0 0.4rem #F23869, 0 0 0.4rem #F23869;  
 }
 .dialog-box_info {
     border: 0.2rem solid  #F23869;
-    box-shadow: inset 0 0 0.4em  #F23869, 0 0 0.4em  #F23869;
+    box-shadow: inset 0 0 0.4rem  #F23869, 0 0 0.4rem  #F23869;
 }
 .dialog-box_info, .dialog-box_error, .dialog-box_success, .dialog-box_warning {
     border-radius: 1em;
