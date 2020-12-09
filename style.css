@@ -81,6 +81,16 @@ input[type=submit]:hover {
   margin-top: 2rem;
   border-radius: 0.2em;
   padding:0.5rem;
+}
+  .border2 {
+    border-style: solid;
+    border-color:	#150773;
+    position: relative;
+    box-shadow: inset 0 0 0.4em 	#150773, 0 0 0.4em 	#150773;
+    margin: 1rem;
+    margin-top: 2rem;
+    border-radius: 0.2em;
+    padding:0.5rem;
 }  
      .flex-container {
       display: flex;
@@ -150,6 +160,7 @@ input[type=submit]:hover {
        word-break: break-all;
        background-color: var(--primary-color);
        display:grid;
+       justify-content: center;
      }
      /* Footer */
      footer {
@@ -161,12 +172,15 @@ input[type=submit]:hover {
      width: 100%;
      position: relative;
      bottom: 0%;
-     z-index: 1;  
+     z-index: 1;
+     color: white;  
      }
       h2 {
       color: #ffffff;
       font-size: 25px;
-      word-break: break-all;  
+      word-break: break-all;
+      justify-content: center;
+      display: flex;  
       }
      .row {
        margin: 8px -16px;
@@ -321,8 +335,8 @@ span.psw {
       text-decoration: none;
       display: block;
       font-size: 16px;
-      margin-right: 42.5rem;
-      margin-left: 42.5rem;
+      margin-right: 1.5rem;
+      margin-left: 1.5rem;
       border-style: solid;
       border-color: var(--primary-color);
       box-shadow: inset 0 0 0.4rem #F23869, 0 0 0.4rem #F23869;
@@ -487,6 +501,22 @@ html {
       .nonki img {
         width: 55%;
         }
+        .btn3 {
+          background-color: #F23869; 
+          border: none;
+          color: white;
+          padding: 1.5rem 2.5rem;
+          text-align: center;
+          text-decoration: none;
+          display: block;
+          font-size: 16px;
+          margin-right: 42.5rem;
+          margin-left: 42.5rem;
+          border-style: solid;
+          border-color: var(--primary-color);
+          box-shadow: inset 0 0 0.4rem #F23869, 0 0 0.4rem #F23869;
+        }
+      }
     @media screen and (max-width: 900px) {
       .column {
         width: 50%;
@@ -500,4 +530,4 @@ html {
       }
 
 
-    }
+    } 
