@@ -161,6 +161,9 @@ input[type=submit]:hover {
        display:flex;
        justify-content: center;
      }
+     .header {
+      margin-top: 5rem; 
+     }
      /* Footer */
      footer {
      display: flex;
@@ -397,6 +400,7 @@ span.psw {
     position: relative;
     width: 95%;
   }
+  
 p {
   display: block;
   margin-block-start: 1em;
