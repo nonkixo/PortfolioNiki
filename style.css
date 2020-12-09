@@ -368,6 +368,9 @@ img {
   width: 100%;
   height: auto;
 }
+.nonki img {
+width: 100%;
+}
 
 html {
   font-family: sans-serif;
@@ -437,6 +440,18 @@ html {
     color: var(--white);
 }
     /* Responsive layout 1 */
+    @media screen and (min-width: 1080px) {
+      .dialog-box_info, .dialog-box_error, .dialog-box_success, .dialog-box_warning {
+          max-width: 30rem;
+      padding: 1.5rem;   
+      
+      }
+      .img1 {
+      width:25%;
+      }
+      .nonki img {
+        width: 55%;
+        }
     @media screen and (max-width: 900px) {
       .column {
         width: 50%;
@@ -448,15 +463,6 @@ html {
       .column {
         width: 100%;
       }
-@media screen and (min-width: 1920px) {
-  .dialog-box_info, .dialog-box_error, .dialog-box_success, .dialog-box_warning {
-      max-width: 30rem;
-  padding: 1.5rem;   
-  
-  }
-  .img1 {
-  width:25%;
-  }    
-}
+
 
     }
