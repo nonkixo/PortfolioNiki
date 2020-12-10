@@ -46,8 +46,7 @@
      margin-top: 2rem;
      border-radius: 0.2em;
      padding:0.5rem;
-     /*N   */
-}
+     }
 .border1 {
   border-style: solid;
   border-color:	#ab20fd;
@@ -113,21 +112,25 @@
     .fa-linkedin {
       background: #007bb5;
       color: white;
+      box-shadow: inset 0 0 0.4rem 	var(--border), 0 0 0.4rem 	var(--border);
     }
     
     .fa-youtube {
       background: #bb0000;
       color: white;
+      box-shadow: inset 0 0 0.4rem 	var(--border), 0 0 0.4rem 	var(--border);
     }
     
     .fa-instagram {
       background: #125688;
       color: white;
+      box-shadow: inset 0 0 0.4rem 	var(--border), 0 0 0.4rem 	var(--border);
     }
     
     .fa-pinterest {
       background: #cb2027;
       color: white;
+      box-shadow: inset 0 0 0.4rem 	var(--border), 0 0 0.4rem 	var(--border);
     }
     /* Overskrifter & Main */
      .main {
@@ -348,7 +351,7 @@ span.psw {
         font-size: 20px;
         margin-left: 2.5rem;
         margin-right: 2.5rem;
-        box-shadow: inset 0 0 0.4rem #ab20fd, 0 0 0.4rem #ab20fd;
+        box-shadow: inset 0 0 1rem #ab20fd, 0 0 1rem #ab20fd;
         border-color:  #ab20fd;
        
   }
