@@ -149,7 +149,7 @@
      }
      /* Portfolier */
      h1 {
-       font-size: 40px;
+       font-size: 4rem;
        color:white;
        background-color: var(--primary-color);
        display:flex;
@@ -166,14 +166,14 @@
     .h1about {
       color: var(--neonlightblue);
       font-family: 'Raleway', sans-serif;
-      font-size:40px;
+      font-size: 1.5rem;
       letter-spacing:10px;
       animation: text-flicker 3s linear infinite;
     }
     .h1contact {
       color: var(--neon);
       font-family: 'Raleway', sans-serif;
-      font-size:25px;
+      font-size:1.5rem;
       letter-spacing:10px;
       animation: text-flicker 3s linear infinite;
     }
@@ -363,15 +363,13 @@ Resources
       font-family: 'Rubik Mono One', sans-serif;  
       }
      .row {
-       margin-left: 0.5rem;
-       margin-right: 0.5rem;
+       margin-left: 2rem;
+       width: 85%;
+      
      }
-     
-
-     .row,
      .row > .column {
-       margin-left: -0.9rem;
-       margin-right: -0.9rem;
+       margin-left: 1rem;
+       margin-right: 1rem;
      }
      
      
@@ -449,16 +447,10 @@ span.psw {
   padding-top: 16px;
 }
 
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-    display: block;
-    float: none;
-  }
   .cancelbtn {
     width: 100%;
   }
-}
+
      
   
      .row:after {
@@ -595,16 +587,15 @@ p {
 /* Images */
 .img1 {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+  margin-left: 3rem;
+
+   width: 45vw;
 }
 img {
-  width: 100%;
-  height: auto;
-}
-.nonki img {
-width: 100%;
+width: 45vw;
+ margin-left: 3rem;
+ display: inline-block;
+ text-align: center;
 }
 
 html {
@@ -623,9 +614,6 @@ width:100%;
 height:100%;
 z-index:-1;
 }
-
-
-
   .dialog-box_info1 {
     border: 0.2rem solid 	#ab20fd;
     box-shadow: inset 0 0 0.4em 	#ab20fd, 0 0 0.4em 	#ab20fd;
@@ -646,19 +634,23 @@ z-index:-1;
     box-shadow: inset 0 0 0.4em	#ab20fd, 0 0 0.4em	#ab20fd;
     color: var(--white);
 }
-    /* Responsive layout 1 */
-    @media screen and (min-width: 1080px) {
+    /* Media Queries */
+    @media screen and (min-width:1080px) {
       .dialog-box_info, .dialog-box_error, .dialog-box_success, .dialog-box_warning {
           max-width: 30rem;
       padding: 1.5rem;   
       
-      }
-     
-      }
-      .img {
-        width:10vw;
-        justify-content: center;
+    }
+      img {
+     justify-content: center;
+     margin-left: 44rem;
+        
         }
+      .img1 {
+          width:50vw;
+          justify-content: center;
+          margin-left: 25rem;
+          }
       .nonki img {
         width: 55%;
         }
@@ -677,28 +669,16 @@ z-index:-1;
           box-shadow: inset 0 0 0.4rem var(--neonblue), 0 0 0.4rem var(--neonblue);
         }
         .row {
-          margin-left: 1rem;
-          margin-right: 1rem;
-          width: 100%;
+          padding: 2rem;
+          margin-left: 20rem;
+          width: 60%;
 
         }
 
         .row > .column {
-         padding: 1rem;
+         margin-left:1rem;
+         margin-right:0.5rem;
         }
         
       
-    @media screen and (max-width: 900px) {
-      .column {
-        width: 50%;
       }
-    }
-    
-       /* Responsive layout 2*/
-    @media screen and (max-width: 600px) {
-      .column {
-        width: 100%;
-      }
-
-
-    } 
