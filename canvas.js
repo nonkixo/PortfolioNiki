@@ -1,165 +1,121 @@
-"use strict";
-{
-	// particles class
-	class Particle {
-		constructor(k, i, j) {
-			this.i = i;
-			this.j = j;
-			this.init();
-			this.x = this.x0;
-			this.y = this.y0;
-			this.pos = posArray.subarray(k * 3, k * 3 + 3);
-			this.pointer = pointer;
-		}
-		init() {
-			this.x0 = canvas.width * 0.5 + this.i * canvas.width / 240;
-			this.y0 = canvas.height * 0.5 + this.j * canvas.height / 160;
-		}
-		move() {
-			const dx = this.pointer.x - this.x;
-			const dy = this.pointer.y - this.y;
-			const d = Math.sqrt(dx * dx + dy * dy);
-			const s = 1000 / d;
-			this.x += -s * (dx / d) + (this.x0 - this.x) * 0.02;
-			this.y += -s * (dy / d) + (this.y0 - this.y) * 0.02;
-			// update buffer position
-			this.pos[0] = this.x;
-			this.pos[1] = this.y;
-			this.pos[2] = 0.15 * s * s;
-		}
-	}
-	// webGL canvas
-	const canvas = {
-		init(options) {
-			// set webGL context
-			this.elem = document.querySelector("canvas");
-			const gl = (this.gl =
-				this.elem.getContext("webgl", options) ||
-				this.elem.getContext("experimental-webgl", options));
-			if (!gl) return false;
-			// compile shaders
-			const vertexShader = gl.createShader(gl.VERTEX_SHADER);
-			gl.shaderSource(
-				vertexShader,
-				`
-					precision highp float;
-					attribute vec3 aPosition;
-					uniform vec2 uResolution;
-					void main() {
-						gl_PointSize = max(2.0, min(30.0, aPosition.z));
-						gl_Position = vec4(
-							( aPosition.x / uResolution.x * 2.0) - 1.0, 
-							(-aPosition.y / uResolution.y * 2.0) + 1.0, 
-							0.0,
-							1.0
-						);
-					}
-      	`
-			);
-			gl.compileShader(vertexShader);
-			const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
-			gl.shaderSource(
-				fragmentShader,
-				`
-					precision highp float;
-					void main() {
-						vec2 pc = 2.0 * gl_PointCoord - 1.0;
-						gl_FragColor = vec4(1.0, 0.85, 0.25, 1.0 - dot(pc, pc));
-					}
-				`
-			);
-			gl.compileShader(fragmentShader);
-			const program = (this.program = gl.createProgram());
-			gl.attachShader(this.program, vertexShader);
-			gl.attachShader(this.program, fragmentShader);
-			gl.linkProgram(this.program);
-			gl.useProgram(this.program);
-			// resolution
-			this.uResolution = gl.getUniformLocation(this.program, "uResolution");
-			gl.enableVertexAttribArray(this.uResolution);
-			// canvas resize
-			this.resize();
-			window.addEventListener("resize", () => this.resize(), false);
-			return gl;
-		},
-		resize() {
-			this.width = this.elem.width = this.elem.offsetWidth;
-			this.height = this.elem.height = this.elem.offsetHeight;
-			for (const p of particles) p.init();
-			this.gl.uniform2f(this.uResolution, this.width, this.height);
-			this.gl.viewport(
-				0,
-				0,
-				this.gl.drawingBufferWidth,
-				this.gl.drawingBufferHeight
-			);
-		}
-	};
-	const pointer = {
-		init(canvas) {
-			this.x = 0.1 + canvas.width * 0.5;
-			this.y = canvas.height * 0.5;
-			this.s = 0;
-			["mousemove", "touchstart", "touchmove"].forEach((event, touch) => {
-				document.addEventListener(
-					event,
-					e => {
-						if (touch) {
-							e.preventDefault();
-							this.x = e.targetTouches[0].clientX;
-							this.y = e.targetTouches[0].clientY;
-						} else {
-							this.x = e.clientX;
-							this.y = e.clientY;
-						}
-					},
-					false
-				);
-			});
-		}
-	};
-	// init webGL canvas
-	const particles = [];
-	const gl = canvas.init({
-		alpha: false,
-		stencil: true,
-		antialias: true,
-		depth: false
-	});
-	// additive blending "lighter"
-	gl.blendFunc(gl.SRC_ALPHA, gl.ONE);
-	gl.enable(gl.BLEND);
-	// init pointer
-	pointer.init(canvas);
-	// init particles
-	const nParticles = 240 * 80;
-	const posArray = new Float32Array(nParticles * 3);
-	let k = 0;
-	for (let i = -120; i < 120; i++) {
-		for (let j = -40; j < 40; j++) {
-			particles.push(new Particle(k++, i, j));
-		}
-	}
-	// create position buffer
-	const aPosition = gl.getAttribLocation(canvas.program, "aPosition");
-	gl.enableVertexAttribArray(aPosition);
-	const positionBuffer = gl.createBuffer();
-	// draw all particles
-	const draw = () => {
-		gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
-		gl.vertexAttribPointer(aPosition, 3, gl.FLOAT, false, 0, 0);
-		gl.bufferData(
-			gl.ARRAY_BUFFER,
-			posArray,
-			gl.DYNAMIC_DRAW
-		);
-		gl.drawArrays(gl.GL_POINTS, 0, nParticles);
-	}
-	// main animation loop
-	const run = () => {
-		requestAnimationFrame(run);
-		for (const p of particles) p.move();
-		draw();
-	};
-	requestAnimationFrame(run);
+var w = c.width = window.innerWidth,
+    h = c.height = window.innerHeight,
+    sum = w + h,
+    ctx = c.getContext( '2d' ),
+    
+    opts = {
+      
+      side: 35,
+      picksParTick: 2,
+      baseTime: 40,
+      addedTime: 10,
+      
+      baseLight: 0,
+      addedLight: 60,
+      strokeLight: 30,
+      
+      hueSpeed: .4,
+      repaintAlpha: 1
+    }
+    
+    difX = Math.sqrt( 3 ) * opts.side / 2, // height of a equilateral triangle 
+    difY = opts.side * 3 / 2, // side of a triangle ( because it goes down to a vertex ) then half a side of the triangle in the hex below: s + s/2 = s*3/2
+    rad = Math.PI / 6, // TAU / 6 = PI / 3 I thought, but apparently this way works better
+    cos = Math.cos( rad ) * opts.side,
+    sin = Math.sin( rad ) * opts.side,
+    
+    hexs = [],
+    tick = 0;
+
+function loop(){
+  
+  window.requestAnimationFrame( loop );
+  
+  tick += opts.hueSpeed;
+  
+  ctx.shadowBlur = 0;
+  ctx.fillStyle = 'rgba(0,0,0,alp)'.replace( 'alp', opts.repaintAlpha );
+  ctx.fillRect( 0, 0, w, h );
+  
+  for( var i = 0; i < opts.picksParTick; ++i )
+    hexs[ ( Math.random() * hexs.length ) |0 ].pick();
+  
+  hexs.map( function( hex ){ hex.step(); } );
 }
+function Hex( x, y ){
+  
+  this.x = x;
+  this.y = y;
+  this.sum = this.x + this.y;
+  this.picked = false;
+  this.time = 0;
+  this.targetTime = 0;
+  
+  this.xs = [ this.x + cos, this.x, this.x - cos, this.x - cos, this.x, this.x + cos ];
+  this.ys = [ this.y - sin, this.y - opts.side, this.y - sin, this.y + sin, this.y + opts.side, this.y + sin ];
+}
+Hex.prototype.pick = function(){
+  
+  this.picked = true;
+  this.time = this.time || 0;
+  this.targetTime = this.targetTime || ( opts.baseTime + opts.addedTime * Math.random() ) |0;
+}
+Hex.prototype.step = function(){
+  
+  var prop = this.time / this.targetTime
+      color = 'hsl(hue,100%,light%)'.replace( 'hue', this.sum / sum * 100 + tick );
+  
+  ctx.beginPath();
+  ctx.moveTo( this.xs[0], this.ys[0] );
+  for( var i = 1; i < this.xs.length; ++i )
+    ctx.lineTo( this.xs[i], this.ys[i] );
+  ctx.lineTo( this.xs[0], this.ys[0] );
+  
+  if( this.picked ){
+    
+    ++this.time;
+    
+    if( this.time >= this.targetTime ){
+      
+      this.time = 0;
+      this.targetTime = 0;
+      this.picked = false;
+    }
+    
+    ctx.fillStyle = ctx.shadowColor = color.replace( 'light', opts.baseLight + opts.addedLight * Math.sin( prop * Math.PI ) );
+    ctx.fill();
+  } else {
+    
+    ctx.strokeStyle = ctx.shadowColor = color.replace( 'light', opts.strokeLight );
+    ctx.stroke();
+  }
+}
+
+for( var x = 0; x < w; x += difX*2 ){
+  var i = 0;
+  
+  for( var y = 0; y < h; y += difY ){
+    ++i;
+    hexs.push( new Hex( x + difX * ( i % 2 ), y ) );
+    
+  }
+}
+loop();
+
+window.addEventListener( 'resize', function(){
+  
+  w = c.width = window.innerWidth;
+  h = c.height = window.innerHeight;
+  sum = w + h;
+  
+  hexs.length = 0;
+  for( var x = 0; x < w; x += difX*2 ){
+    var i = 0;
+
+    for( var y = 0; y < h; y += difY ){
+      ++i;
+      hexs.push( new Hex( x + difX * ( i % 2 ), y ) );
+
+    }
+  }
+})
