@@ -318,8 +318,8 @@ span.psw {
       text-decoration: none;
       display: grid;
       font-size: 20px;
-      margin-left: 1rem;
-      margin-right: 1rem;
+      margin-left: 0.2rem;
+      margin-right: 0.1rem;
       box-shadow: inset 0 0 0.4rem var(--border), 0 0 0.4rem var(--border);
       border-color:  var(--border);
     
@@ -334,10 +334,9 @@ span.psw {
       text-decoration: none;
       display: block;
       font-size: 16px;
-      margin-right: 1.5rem;
-      margin-left: 1.5rem;
+      justify-content: center;
       border-style: solid;
-      border-color: var(--primary-color);
+      border-color: var(--neonpurple);
       box-shadow: inset 0 0 0.5rem #150773, 0 0 0.5rem #150773;
     
        }
@@ -518,19 +517,18 @@ z-index:-1;
         width: 55%;
         }
         .btn3 {
-          background-color: #F23869; 
+          background-color: var(--neonblue); 
           border: none;
-          color: white;
-          padding: 1.5rem 2.5rem;
+         
           text-align: center;
           text-decoration: none;
           display: block;
           font-size: 16px;
-          margin-right: 42.5rem;
-          margin-left: 42.5rem;
+          margin-right: 0.2rem;
+          margin-left: 0.2rem;
           border-style: solid;
           border-color: var(--primary-color);
-          box-shadow: inset 0 0 0.4rem #F23869, 0 0 0.4rem #F23869;
+          box-shadow: inset 0 0 0.4rem var(--neonblue), 0 0 0.4rem var(--neonblue);
         }
       }
     @media screen and (max-width: 900px) {
