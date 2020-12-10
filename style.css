@@ -68,6 +68,16 @@
     border-radius: 0.2em;
     padding:0.5rem;
 }  
+.border3 {
+  border-style: solid;
+  border-color:var(--neon);
+  position: relative;
+  box-shadow: inset 0 0 0.4rem 	var(--neon), 0 0 0.4rem 	var(--neon);
+  margin: 1rem;
+  margin-top: 2rem;
+  border-radius: 0.2em;
+  padding:0.5rem;
+}  
      .flex-container {
       display: flex;
       flex-direction: column;
@@ -521,6 +531,7 @@ span.psw {
        .btn4 {
         background-color: #ab20fd; 
         border-style: solid;
+        border-width: 0.5rem;
         color: white;
         text-align: center;
         text-decoration: none;
@@ -529,7 +540,7 @@ span.psw {
         margin-left: 2.5rem;
         margin-right: 2.5rem;
         box-shadow: inset 0 0 1rem #ab20fd, 0 0 1rem #ab20fd;
-        border-color:  #ab20fd;
+        border-color: var(--primary-color);
        
   }
   .btn4:hover {
@@ -688,9 +699,12 @@ z-index:-1;
       padding: 1.5rem;   
       
       }
-      .img1 {
-      width:20vw;
+     
       }
+      .img {
+        width:10vw;
+        justify-content: center;
+        }
       .nonki img {
         width: 55%;
         }
