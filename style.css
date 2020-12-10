@@ -106,12 +106,14 @@
       background: #3B5998;
       color: white;
       box-shadow: inset 0 0 0.4rem 	#3B5998, 0 0 0.4rem 	#3B5998;
+      box-shadow: inset 0 0 0.4rem 	var(--border), 0 0 0.4rem 	var(--border);
     }
     
     .fa-twitter {
       background: #55ACEE;
       color: white;
       box-shadow: inset 0 0 0.4rem 	#3B5998, 0 0 0.4rem 	#3B5998;
+      box-shadow: inset 0 0 0.4rem 	var(--border), 0 0 0.4rem 	var(--border);
     }
     
     .fa-google {
@@ -139,11 +141,7 @@
       box-shadow: inset 0 0 0.4rem 	var(--border), 0 0 0.4rem 	var(--border);
     }
     
-    .fa-pinterest {
-      background: #cb2027;
-      color: white;
-      box-shadow: inset 0 0 0.4rem 	var(--border), 0 0 0.4rem 	var(--border);
-    }
+   
     /* Overskrifter & Main */
      .main {
        max-width: 1000px;
@@ -597,6 +595,7 @@ p {
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+  color:var(--white)
   
 }
 /* Images */
