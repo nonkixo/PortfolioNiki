@@ -11,9 +11,9 @@
     --border:#F23869;
     --neon:#ccff00;
     --neonblue:#150773;
-    --neonpurple:#3261BF;
+    --neonlightblue:#3261BF;
     --black2:#030226;
-
+    --neonpurple:#ab20fd;
   }
   
    * {
@@ -139,7 +139,7 @@
        max-width: 1000px;
        margin: auto;
      }
-     
+     /* Portfolier */
      h1 {
        font-size: 40px;
        color:white;
@@ -169,6 +169,14 @@
       letter-spacing:10px;
       animation: text-flicker 3s linear infinite;
     }
+    .h1portfolio {
+      color: var(--neonpurple);
+      font-family: 'Raleway', sans-serif;
+      font-size:25px;
+      letter-spacing:10px;
+      animation: text-flicker 3s linear infinite;
+    }
+            
                
      
 h1 {
