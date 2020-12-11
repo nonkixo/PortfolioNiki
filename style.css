@@ -290,37 +290,38 @@ button h1 {
 h1 {
   color:#FF00E6;
   font-family: 'Raleway', sans-serif;
-  font-size: 3rem;
-  animation: text-flicker 3s linear infinite;
-  margin-left:3rem;
+  font-size: 2.3rem;
+  animation: text-flicker 8s linear infinite;
+  margin-left:2rem;
+  padding: 0.5rem;
 }
      .h1forside {
       color:#FF00E6;
       font-family: 'Raleway', sans-serif;
       font-size: 4.5rem;
-      animation: text-flicker 3s linear infinite;
+      animation: text-flicker 8s linear infinite;
       margin-left:0rem;
     }
     .h1about {
-      color: var(--neonlightblue);
-      font-family: 'Raleway', sans-serif;
-      font-size: 2rem;
-      animation: text-flicker 3s linear infinite;
-      margin-left:1rem;
-      padding: 2rem;
+        color: var(--neonlightblue);
+        font-family: 'Raleway', sans-serif;
+        font-size: 3rem;
+        animation: text-flicker 8s linear infinite;
+        margin-left: 1.5rem;
+        padding: 3rem;
     }
     .h1contact {
       color: var(--neon);
       font-family: 'Raleway', sans-serif;
       font-size:1.5rem;
-      animation: text-flicker 3s linear infinite;
-      margin-left:0rem;
+      animation: text-flicker 8s linear infinite;
+      margin-left:35rem;
     }
     .h1portfolio {
       color: var(--neonpurple);
       font-family: 'Raleway', sans-serif;
       font-size:1.5rem;
-      animation: text-flicker 3s linear infinite;
+      animation: text-flicker 8s linear infinite;
       margin-left:6rem;
     }
             
@@ -713,6 +714,7 @@ img {
   font-size: 24px;
   color: var(--primary-grey);
   width: 5rem;
+  margin-top:0rem
 }
 .img2 {
   width: 20rem;
@@ -758,9 +760,16 @@ img {
       
       .img1 {
         display: block;
-        margin-left: 20rem;
+        margin-left: 18rem;
         width:25rem;
       }
+      .img2 {
+        width: 40rem;
+         margin-left: 13rem;
+         padding: 2rem;
+         display: inline-block;
+         text-align: center;
+        }
       .img3 {
         width: 20rem;
         margin-left: 20rem;
@@ -774,33 +783,91 @@ img {
           font-size: 24px;
           color: var(--primary-grey);
       }      
+      h1 {
+        color: #FF00E6;
+        font-family: 'Raleway', sans-serif;
+        font-size: 3.0rem;
+        animation: text-flicker 8s linear infinite;
+        margin-left: 20rem;
+        padding: 2rem;
+    }
        .h1portfolio {
           margin-left: 21.5rem;
           font-size: 4rem;
         } 
         .h1about {
-          color: var(--neonlightblue);
-          font-family: 'Raleway', sans-serif;
-          font-size: 2rem;
-          animation: text-flicker 3s linear infinite;
-          margin-left: 12rem;
+            color: var(--neonlightblue);
+            font-family: 'Raleway', sans-serif;
+            font-size: 3rem;
+            animation: text-flicker 8s linear infinite;
+            margin-bottom: 1rem;
+        }
       } 
-    
+      .h1contact {
+        color: var(--neon);
+        font-family: 'Raleway', sans-serif;
+        font-size:2.5rem;
+        animation: text-flicker 8s linear infinite;
+        margin-left:10rem;
+    /* Dialog Boks */
+      }
+    .dialog-box_info, .dialog-box_error, .dialog-box_success, .dialog-box_warning {
+  
+      color: white;
+      margin-left: 1rem;
+      padding: 1.5rem;
+      position: relative;
+      width: 95%;
+      border-style: solid;
+      font-size: 1.5rem;
+            
+    }
    
     @media screen and (min-width:1920px) {
-      
+      /* IMAGES */
       .img1 {
         display: block;
-        margin-left: 30rem;
+        margin-left: 35rem;
         width: 40rem;
       }
+      .img2 {
+        width: 40rem;
+         margin-left: 40rem;
+         padding: 2rem;
+         display: inline-block;
+         text-align: center;
+      }
+      .img3 {
+        width: 20rem;
+        margin-left: 20rem;
+        padding: 2rem;
+        display: inline-block;
+        text-align: center;
+      }
+         /* HEADERS */
+      
+      h1 {
+        color: #FF00E6;
+        font-family: 'Raleway', sans-serif;
+        font-size: 4.5rem;
+        animation: text-flicker 8s linear infinite;
+        margin-left: 42rem;
+        padding: 1rem;
+    }
       .h1about {
         color: var(--neonlightblue);
         font-family: 'Raleway', sans-serif;
         font-size: 4rem;
-        animation: text-flicker 3s linear infinite;
+        animation: text-flicker 8s linear infinite;
         margin-left: 20rem;
       }
+      .h1contact {
+        color: var(--neon);
+        font-family: 'Raleway', sans-serif;
+        font-size: 3.5rem;
+        animation: text-flicker 8s linear infinite;
+        margin-left: 40rem;
+      }    
       .img3 {
         width: 35rem;
         margin-left: 40rem;
@@ -819,19 +886,19 @@ img {
         padding: 0.1rem;
         font-size: 24px;
         color: var(--primary-grey);
+        
       }
-      /* Dialog Boks */
-      .dialog-box_info, .dialog-box_error, .dialog-box_success, .dialog-box_warning {
+        /* Dialog Boks */
+    .dialog-box_info, .dialog-box_error, .dialog-box_success, .dialog-box_warning {
   
-        color: white;
-        margin-left: 45rem;
-        padding: 1.5rem;
-        position: relative;
-        width: 95%;
-        border-style: solid;
-        font-size: 1.5rem;
-              
-      }
+      color: white;
+      margin-left: 1rem;
+      padding: 1.5rem;
+      position: relative;
+      border-style: solid;
+      font-size: 2rem;
+            
+    }
       
     
      
@@ -854,5 +921,5 @@ img {
           box-shadow: inset 0 0 0.4rem var(--neonblue), 0 0 0.4rem var(--neonblue);
         }
         
-      }
-     
+      
+      
