@@ -40,7 +40,7 @@ header {
 }
 
 .nonkiXO {
-  color: black;
+  color: var(--white);
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -49,6 +49,8 @@ header {
   padding: 1.2rem;
   letter-spacing: 8px;
   -webkit-text-stroke-width: thin;
+  
+
 }
 
 .nonkiXO:hover {
@@ -88,7 +90,7 @@ header {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: var(--border);
+  color: var(--white);
   display: block;
   transition: 0.3s;
 
