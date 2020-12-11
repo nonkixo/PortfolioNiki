@@ -654,7 +654,6 @@ span.psw {
   
   color: white;
   margin: 5% auto;
-  max-width: 15em;
   padding: 1.5rem;
   position: relative;
   width: 95%;
@@ -679,8 +678,7 @@ span.psw {
 .dialog-box_info, .dialog-box_error, .dialog-box_success, .dialog-box_warning {
     color: white;
     margin: 5% auto;
-    max-width: 15em;
-    padding: 1.5rem;
+   padding: 1.5rem;
     position: relative;
     width: 95%;
   }
@@ -697,10 +695,8 @@ p {
 /* Images */
 .img1 {
   display: block;
-  margin-left: 2rem;
-  width: 15rem;
-   
-  
+  margin-left: -0.4rem;
+  width: 18rem;
 }
 img {
  margin-left: 1rem;
@@ -734,6 +730,7 @@ img {
     border: 0.2rem solid 	#ab20fd;
     box-shadow: inset 0 0 0.4em 	#ab20fd, 0 0 0.4em 	#ab20fd;
     color: var(--white);
+    padding: 1.5rem;
   }
   .dialog-box_success1 {
     border: 0.2rem solid 	#ab20fd;
@@ -749,10 +746,11 @@ img {
     
     @media screen and (min-width:1080px) {
       
-      }
+      
       .img1 {
         display: block;
-        margin-left: 18rem;
+        margin-left: 20rem;
+        width:25rem;
       }
         .span img {
           position: absolute;
@@ -802,11 +800,12 @@ img {
       .dialog-box_info, .dialog-box_error, .dialog-box_success, .dialog-box_warning {
   
         color: white;
-        margin-left: 5rem;
+        margin-left: 45rem;
         padding: 1.5rem;
         position: relative;
         width: 95%;
         border-style: solid;
+        font-size: 1.5rem;
               
       }
       
@@ -831,4 +830,5 @@ img {
           box-shadow: inset 0 0 0.4rem var(--neonblue), 0 0 0.4rem var(--neonblue);
         }
         
-      }     
+      }
+    }   
