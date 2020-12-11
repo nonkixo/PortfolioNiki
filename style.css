@@ -704,6 +704,7 @@ img {
  display: inline-block;
  text-align: center;
 }
+
 .span img {
   position: absolute;
   right: 0;
@@ -719,6 +720,13 @@ img {
    display: inline-block;
    text-align: center;
   }
+  .img3 {
+    width: 20rem;
+     margin-left: 1.5rem;
+     padding: 2rem;
+     display: inline-block;
+     text-align: center;
+    }
 
 
   .dialog-box_info1 {
