@@ -24,7 +24,141 @@
        background-color: #212121;
        padding: 20px;
        /* Navigation-bar */
+       /* Header */ 
      }
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  height: 88px;
+  width: 100%;
+  background-color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  z-index: 1;
+}
+
+.nonkiXO {
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 1.2rem;
+  letter-spacing: 8px;
+  -webkit-text-stroke-width: thin;
+}
+
+.nonkiXO:hover {
+  color: var(--primary-color);
+}
+/* Menu or Sidenav */
+    
+
+.topnav {
+  display: none 
+}
+
+.span {
+  position: absolute;
+  right: 0;
+  padding: 1.6rem;
+  font-size: 24px;
+  color: var(--primary-grey);
+}
+
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  text-align:left;
+  background-color: var(--primary-color);
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: var(--border);
+  display: block;
+  transition: 0.3s;
+
+}
+
+.sidenav .menu {
+  padding-top: 88px;
+}
+
+.sidenav .menu .item {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+  border-top: 2px solid var(--white);
+}
+
+.contact {
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.item
+
+.sidenav .menu .item img {
+  height: 16px;
+  width: 16px;
+  padding: 8px 32px 8px 8px;
+}
+
+.sidenav a:hover{
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  right: 0;
+  font-size: 24px;
+  padding: 1.6rem;
+  color: var(--primary-grey);
+}
+
+button {
+  border-style: solid;
+  border-color: var(--tertiary-color);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 8px 15px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: 800;
+  box-shadow: 0 0 10px rgb(0,0,0,0.5);
+  }
+
+button h1 {
+  font-size: 20px;
+  display: contents;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.btn1:hover, .btn2:hover, .btn3:hover, .btn4:hover {
+  background-color: gray;
+  color: white;
+}
+
+.btn1:active, .btn2:active, .btn3:active, .btn4:active {
+  background-color: black;
+}
+     
      li {
       float: left;
     }
@@ -35,46 +169,7 @@
       color:var(--white);
       border-radius: 0.2rem;
     } 
-    .mobile-container {
-      max-width: 480px;
-      margin: auto;
-      background-color: #555;
-      height: 500px;
-      color: white;
-      border-radius: 10px;
-    }
-    
-    .topnav {
-      overflow: hidden;
-      background-color: #333;
-      position: relative;
-    }
-    
-    .topnav #myLinks {
-      display: none;
-    }
-    
-    .topnav a {
-      float: left;
-      color: white;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 17px;
-    }
-    
-    .topnav a.icon {
-      float: right;
-    }
-    
-    .topnav a:hover {
-      background-color: #ddd;
-      color: black;
-    }
-    
-    .active {
-      background-color: #4CAF50;
-      color: white;
-    }
+   
    
      /* Borders */
      .border {
@@ -221,7 +316,7 @@ h1 {
       font-family: 'Raleway', sans-serif;
       font-size:1.5rem;
       animation: text-flicker 3s linear infinite;
-      margin-left:5rem;
+      margin-left:6rem;
     }
             
                
@@ -598,15 +693,22 @@ p {
 .img1 {
   display: block;
   margin-left: 2rem;
+  width: 15rem;
    
   
 }
 img {
-width: 15rem;
  margin-left: 1rem;
  padding: 2rem;
  display: inline-block;
  text-align: center;
+}
+.span img {
+  position: absolute;
+  right: 0;
+  padding: 1.6rem;
+  font-size: 24px;
+  color: var(--primary-grey);
 }
 .img2 {
   width: 20rem;
@@ -616,22 +718,7 @@ width: 15rem;
    text-align: center;
   }
 
-html {
-  font-family: sans-serif;
-  line-height: 1.15;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  background-color:  #212121;
- 
-}
-.canvas1 {
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-z-index:-1;
-}
+
   .dialog-box_info1 {
     border: 0.2rem solid 	#ab20fd;
     box-shadow: inset 0 0 0.4em 	#ab20fd, 0 0 0.4em 	#ab20fd;
