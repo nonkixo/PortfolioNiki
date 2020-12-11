@@ -1,10 +1,11 @@
-* {
-  font-family: 'JetBrains Mono', monospace; 
-   }
+
    
-  /* font link */
+  /* Font link */
   @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+  * {
+    font-family: 'JetBrains Mono', monospace; 
+     }
   :root {
     --primary-color: #212121;
     --white: #ffffff;
@@ -102,7 +103,7 @@ header {
   border-bottom: 2px solid var(--primary-color);
 }
 
-.item
+
 
 .sidenav .menu .item img {
   height: 16px;
@@ -169,7 +170,6 @@ button h1 {
      border-color: #F23869;
      position: relative;
      box-shadow: inset 0 0 0.4em #F23869, 0 0 0.4em #F23869;
-     margin: 1rem;
      margin-top: 2rem;
      border-radius: 0.2em;
      padding:0.5rem;
@@ -275,44 +275,44 @@ button h1 {
      }
      /* Overskrifter */
          
-h1 {
-  color:#FF00E6;
-  font-family: 'Raleway', sans-serif;
-  font-size: 2.3rem;
-  animation: text-flicker 8s linear infinite;
-  margin-left:2rem;
-  padding: 0.5rem;
-}
+     h1 {
+      color: #FF00E6;
+      font-size: 1.9rem;
+      animation: text-flicker 8s linear infinite;
+      margin-left: -2rem;
+      padding: 3rem;
+      font-family: 'Rubik Mono One', sans-serif;
+  }
 .h1contact {
-  color: var(--neon);
-  font-family: 'Raleway', sans-serif;
+  color: var(--neon); 
   font-size:1.5rem;
   animation: text-flicker 8s linear infinite;
   margin-left:1rem;
   padding:3rem;
+  font-family: 'Rubik Mono One', sans-serif;
 }
      .h1forside {
       color:#FF00E6;
-      font-family: 'Raleway', sans-serif;
       font-size: 4.5rem;
       animation: text-flicker 8s linear infinite;
       margin-left:0rem;
+      font-family: 'Rubik Mono One', sans-serif;
     }
     .h1about {
-        color: var(--neonlightblue);
-        font-family: 'Raleway', sans-serif;
-        font-size: 2.5rem;
-        animation: text-flicker 8s linear infinite;
-        margin-left: 1.5rem;
-        padding: 1rem;
-    }
+      color: var(--neonlightblue);
+      font-size: 2.5rem;
+      animation: text-flicker 8s linear infinite;
+      margin-left: -2rem;
+      padding: 1.8rem;
+  }
+    
   
     .h1portfolio {
       color: var(--neonpurple);
-      font-family: 'Raleway', sans-serif;
       font-size:1.5rem;
       animation: text-flicker 8s linear infinite;
-      margin-left:6rem;
+      margin-left:1.5rem;
+      font-family: 'Rubik Mono One', sans-serif;
     }
   
   /* Animations */          
@@ -376,45 +376,7 @@ h1 {
   }
 }
 
-@keyframes border-flicker {
-  0% {
-    opacity:0.1;
-    -webkit-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
--moz-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
-  }
-  2% {
-    opacity:1;
-    -webkit-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
--moz-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
-  }
-  4% {
-    opacity:0.1;
-    -webkit-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
--moz-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
-  }
-  
-  8% {
-    opacity:1;
-    -webkit-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
--moz-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
-  }
-  70% {
-    opacity:0.7;
-    -webkit-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
--moz-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
-  }
-  100% {
-    opacity:1;
-    -webkit-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
--moz-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
-  }
-}
+
 
 @keyframes letter-flicker {
   0% {
@@ -673,10 +635,6 @@ span.psw {
   
 p {
   display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
   color:var(--white)
   
 }
@@ -770,29 +728,30 @@ img {
       }      
       h1 {
         color: #FF00E6;
-        font-family: 'Raleway', sans-serif;
-        font-size: 3.0rem;
+        font-size: 5rem;
         animation: text-flicker 8s linear infinite;
         margin-left: 20rem;
-        padding: 2rem;
+        padding: 6rem;
+        font-family: 'Rubik Mono One', sans-serif;
     }
        .h1portfolio {
-          margin-left: 21.5rem;
+          margin-left: 17.5rem;
           font-size: 4rem;
+          font-family: 'Rubik Mono One', sans-serif;
         } 
         .h1about {
             color: var(--neonlightblue);
-            font-family: 'Raleway', sans-serif;
             font-size: 3rem;
             animation: text-flicker 8s linear infinite;
-            margin-bottom: 1rem;
+            margin-bottom: 6rem;
+            font-family: 'Rubik Mono One', sans-serif;
         }
       .h1contact {
         color: var(--neon);
-        font-family: 'Raleway', sans-serif;
         font-size:2.5rem;
         animation: text-flicker 8s linear infinite;
         margin-left:10rem;
+        font-family: 'Rubik Mono One', sans-serif;
     /* Dialog Boks */
       }
     .dialog-box_info, .dialog-box_error, .dialog-box_success, .dialog-box_warning {
@@ -832,25 +791,25 @@ img {
       
       h1 {
         color: #FF00E6;
-        font-family: 'Raleway', sans-serif;
         font-size: 4.5rem;
         animation: text-flicker 8s linear infinite;
         margin-left: 42rem;
         padding: 1rem;
+        font-family: 'Rubik Mono One', sans-serif;
     }
       .h1about {
         color: var(--neonlightblue);
-        font-family: 'Raleway', sans-serif;
         font-size: 4rem;
         animation: text-flicker 8s linear infinite;
         margin-left: 20rem;
+        font-family: 'Rubik Mono One', sans-serif;
       }
       .h1contact {
         color: var(--neon);
-        font-family: 'Raleway', sans-serif;
         font-size: 3.5rem;
         animation: text-flicker 8s linear infinite;
         margin-left: 40rem;
+        font-family: 'Rubik Mono One', sans-serif;
       }    
       .img3 {
         width: 35rem;
@@ -860,8 +819,9 @@ img {
         text-align: center;
       }
         .h1portfolio {
-          margin-left: 50rem;
+          margin-left: 45rem;
           font-size: 4rem;
+           font-family: 'Rubik Mono One', sans-serif;
         }
        
       }
