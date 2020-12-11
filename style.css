@@ -290,7 +290,7 @@ button h1 {
 h1 {
   color:#FF00E6;
   font-family: 'Raleway', sans-serif;
-  font-size: 2rem;
+  font-size: 3rem;
   animation: text-flicker 3s linear infinite;
   margin-left:3rem;
 }
@@ -613,7 +613,7 @@ span.psw {
      } 
      
      .btn3 {
-      background-color:#150773; 
+      background-color:var(--neonlightblue); 
       border: none;
       color: white;
       padding: 1.5rem 2.5rem;
@@ -623,10 +623,11 @@ span.psw {
       font-size: 16px;
       justify-content: center;
       border-style: solid;
-      border-color: var(--neonpurple);
-      box-shadow: inset 0 0 0.5rem #150773, 0 0 0.5rem #150773;
+      border-color: var(--neonlightblue);
+      box-shadow: inset 0 0 0.4rem var(--neonlightblue), 0 0 0.4rem var(--neonlightblue);
+     }
+      
     
-       }
        .btn4 {
         background-color: #ab20fd; 
         border-style: solid;
@@ -722,7 +723,7 @@ img {
   }
   .img3 {
     width: 20rem;
-     margin-left: 1.5rem;
+     margin-left: 0.1rem;
      padding: 2rem;
      display: inline-block;
      text-align: center;
@@ -760,6 +761,13 @@ img {
         margin-left: 20rem;
         width:25rem;
       }
+      .img3 {
+        width: 20rem;
+        margin-left: 20rem;
+        padding: 2rem;
+        display: inline-block;
+        text-align: center;
+      }
         .span img {
           position: absolute;
           padding: 1rem;
@@ -773,9 +781,9 @@ img {
         .h1about {
           color: var(--neonlightblue);
           font-family: 'Raleway', sans-serif;
-          font-size: 3rem;
+          font-size: 2rem;
           animation: text-flicker 3s linear infinite;
-          margin-left: 20rem;
+          margin-left: 12rem;
       } 
     
    
@@ -786,17 +794,25 @@ img {
         margin-left: 30rem;
         width: 40rem;
       }
-    
+      .h1about {
+        color: var(--neonlightblue);
+        font-family: 'Raleway', sans-serif;
+        font-size: 4rem;
+        animation: text-flicker 3s linear infinite;
+        margin-left: 20rem;
+      }
+      .img3 {
+        width: 35rem;
+        margin-left: 40rem;
+        padding: 2rem;
+        display: inline-block;
+        text-align: center;
+      }
         .h1portfolio {
-          margin-left: 20rem;
+          margin-left: 50rem;
           font-size: 4rem;
         }
-        .h1about {
-          color: var(--neonlightblue);
-          font-family: 'Raleway', sans-serif;
-          font-size: 4rem;
-          animation: text-flicker 3s linear infinite;
-          margin-left: 40rem;
+       
       }
       .span img {
         position: absolute;
@@ -839,4 +855,4 @@ img {
         }
         
       }
-    }   
+     
